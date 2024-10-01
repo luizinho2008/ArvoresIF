@@ -1,0 +1,170 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.corverde {
+    color: #008000;
+}
+.corbranca {
+    color: white;
+}
+.center {
+    text-align: center;
+}
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #008000;
+    height: 60px;
+    background-color: lightgreen;
+    font-weight: bolder;
+}
+.menu ul {
+    display: flex;
+}
+.menu ul li {
+    list-style-type: none;
+    margin: 10px;
+}
+.logo {
+    width: 45px;
+    margin: 10px;
+}
+.logo img {
+    width: 100%;
+}
+.arvore-img {
+    width: 200px;
+    border-radius: 20px;
+    border: 5px solid linear-gradient(to left,rgb(0, 163, 0), rgb(0, 49, 0));;
+    padding: 10px;
+    background-image: linear-gradient(to left,rgb(0, 163, 0), rgb(0, 49, 0));
+}
+.arvore-container {
+    display: flex;
+    padding: 20px;
+}
+#arvores-container {
+    border: 5px solid #008000;
+    border-radius: 20px;
+}
+.arvore-container h2 {
+    margin-left: 20px;
+    background-image: linear-gradient(to left,rgb(0, 163, 0), rgb(0, 49, 0));
+}
+.arvore-info {
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+}
+.bloco01 {
+    background-color: #008000;
+    display: flex;
+    justify-content: space-between;
+}
+.titulo {
+    font-size: 30px;
+}
+.texto {
+    margin: 20px 0px 0px 20px;
+}
+.imagem {
+    margin: 20px 350px 20px 20px;
+}
+.imagem img {
+    border-radius: 20px;
+}
+.formulario {
+    display: flex; /* Coloca os filhos na mesma linha */
+    flex-wrap: wrap; /* Faz com o bloco vai para a linha de baixo se não couber na linha atual */
+    justify-content: space-between;
+}
+.form {
+    background-color: rgb(221, 225, 225);
+    padding: 50px;
+    width: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.form input {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+    border: none;
+    border: 2px solid gray;
+    background-color: #ffffff;
+    outline: none;
+}
+#button {
+    background-image: linear-gradient(to left,rgb(0, 163, 0), rgb(0, 49, 0));
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.localizacao {
+    display: flex;
+}
+.localizacao input {
+    margin-right: 10px;
+}
+.msg-erro {
+    color: red;
+    display: none;
+    font-weight: bolder;
+}
+.rodape {
+    background-color: #008000;
+    color: white;
+    text-align: center;
+    padding: 12.5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 17.5px;
+    border-top: 2px solid black;
+}
+#grava-sucess, #grava-falha {
+    background-image: linear-gradient(to left,rgb(0, 163, 0), rgb(0, 49, 0));
+    color: white;
+    font-weight: bolder;
+    border-radius: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    margin-top: 5%;
+}
+
+.buttons button {
+    width: 47.5%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: lightgreen;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+}
+.buttons button:hover {
+    background-color: #008000;
+    color: white;
+}
+
+#delete-sucess, #delete-falha {
+    background-color: lightgreen;
+    color: black;
+    font-weight: bolder;
+    border-radius: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    margin-bottom: 1%;
+}
