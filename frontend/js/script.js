@@ -116,10 +116,12 @@ document.getElementById("linkImagem").addEventListener("input", function(e) {
 
     if (!isValidUrl(linkImagem)) {
         document.getElementById('erro-linkImagem').style.display = 'block';
+        document.getElementById("linkImagem").style.border = "3px solid red";
         checkForm.linkImagem = false;
     }
     else {
         document.getElementById('erro-linkImagem').style.display = 'none';
+        document.getElementById("linkImagem").style.border = "2px solid gray";
         checkForm.linkImagem = true;
     }
     testarBotao();
