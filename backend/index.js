@@ -25,6 +25,18 @@ app.get("/api/arvores", (req, res) => {
     });
 });
 
+app.get("/api/arvores/:id", (req, res) => {
+    const sql = `SELECT * FROM arvores WHERE id = ${req.params.id}`;
+    connexionDB.query(sql, (erro, resultados) => {
+        if(erro) {
+            res.send(`<h2>Falha ao exibir árvore: ${erro}</h2>`)
+        }
+        else {
+            res.send(resultados);
+        }
+    });
+});
+
 app.post("/api/arvores", (req, res) => {
     const sql = `INSERT INTO arvores(nome, nomecientifico, descricao, latitude, longitude, imagem)
     VALUES('${req.body.nome}', '${req.body.nomeCientifico}', '${req.body.descricao}',
@@ -36,6 +48,35 @@ app.post("/api/arvores", (req, res) => {
         }
         else {
           res.send(resultados);
+        }
+    });
+});
+
+app.delete("/api/arvores/:id", (req, res) => {
+    const sql = `DELETE FROM arvores WHERE id = ${req.params.id};`;
+    connexionDB.query(sql, (erro, resultados) => {
+        if (erro) {
+            res.send("<h2>Falha ao deletar árvore no MySQL</h2>");
+        }
+        else {
+            res.send(resultados);
+        }
+    });
+});
+
+app.put("/api/arvores/:id", (req, res) => {
+    const sql = `UPDATE arvores SET 
+        nome = '${req.body.nome}',
+        nomeCientifico = '${req.body.nomeCientifico}', 
+        descricao = '${req.body.descricao}', latitude = '${req.body.latitude}',
+        longitude = '${req.body.longitude}', imagem = '${req.body.linkImagem}'
+        WHERE id = ${req.params.id};`;
+
+    connexionDB.query(sql, (erro, resultados) => {
+        if (erro) {
+            res.send("<h2>Falha ao atualizar torcedor no MySQL</h2>");
+        } else {
+            res.send(resultados);
         }
     });
 });
